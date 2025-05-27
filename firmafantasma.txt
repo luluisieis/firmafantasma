@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Firma Fantasma</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+    * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Inconsolata', monospace;
+    }
+    header {
+      padding: 20px;
+      border-bottom: 1px solid #001a3c;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #fff;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 15px;
+      background: #000a1a;
+      border-bottom: 1px solid #001a3c;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #001a3c;
+      padding: 5px 10px;
+    }
+    nav a:hover {
+      background: #001a3c;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    h2 {
+      border-bottom: 1px solid #001a3c;
+      padding-bottom: 5px;
+    }
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .produto {
+      border: 1px solid #001a3c;
+      padding: 15px;
+      background: #000a1a;
+    }
+    .nome-produto {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+    .descricao-produto {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+    .preco-produto {
+      color: #ff4136;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .botao-comprar {
+      background: #ff4136;
+      border: none;
+      color: #000;
+      padding: 10px 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      transition: background 0.2s ease;
+    }
+    .botao-comprar:hover {
+      background: #cc352c;
+    }
+    #carrinho {
+      margin-top: 50px;
+      border-top: 1px dashed #444;
+      padding-top: 30px;
+    }
+    #carrinho h2 {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    #itens-carrinho {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    #total {
+      font-weight: bold;
+      color: #fff;
+      margin-top: 10px;
+    }
+    #finalizar {
+      margin-top: 15px;
+      background: #ff4136;
+      color: #000;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px 15px;
+      border-top: 1px solid #001a3c;
+    }
+    footer p, footer a {
+      color: #fff;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .pix-section {
+      display: none;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .pix-section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Firma Fantasma</h1>
+  </header>
+
+  <nav>
+    <a href="#destaques">DESTAQUES</a>
+    <a href="#gg">GG</a>
+    <a href="#networking">NETWORKING</a>
+    <a href="#infos-full">infos full</a>
+    <a href="#nf">NF</a>
+    <a href="#milhas">MILHAS</a>
+  </nav>
+
+  <main>
+    <section id="destaques">
+      <h2>DESTAQUES</h2>
+      <div class="produtos">
+        <!-- Produtos em destaque podem ser adicionados aqui -->
+      </div>
+    </section>
+
+    <section id="gg">
+      <h2>GG</h2>
+      <div class="produtos">
+        <div class="produto">
+          <div class="nome-produto">GG</div>
+          <div class="descricao-produto">✅ GG testada no CHK com garantia de live! ⚡ Limite aleatório 🧾 Apenas números ❓ Suporte</div>
+          <div class="preco-produto">R$ 5,00</div>
+          <button class="botao-comprar">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="infos-full">
+      <h2>infos full</h2>
+      <div class="produtos">
+        <div class="produto">
+          <div class="nome-produto">GOLD (Recomendado)</div>
+          <div class="descricao-produto">💳 Limite R$300 a R$600 ✅ Garantia de live</div>
+          <div class="preco-produto">R$ 40,00</div>
+          <button class="botao-comprar">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <div class="nome-produto">CLASSIC</div>
+          <div class="descricao-produto">💳 Limite R$150 a R$200 ✅ Garantia de live</div>
+          <div class="preco-produto">R$ 40,00</div>
+          <button class="botao-comprar">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <div class="nome-produto">STANDARD</div>
+          <div class="descricao-produto">💳 Limite R$150 a R$200 ✅ Garantia de live</div>
+          <div class="preco-produto">R$ 40,00</div>
+          <button class="botao-comprar">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <div class="nome-produto">NU GOLD</div>
+          <div class="descricao-produto">💳 Limite R$600 a R$900 ✅ Garantia de live</div>
+          <div class="preco-produto">R$ 28,00</div>
+          <button class="botao-comprar">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <div class="nome-produto">PLATINUM</div>
+          <div class="descricao-produto">💳 Limite R$900 a R$1.200 ✅ Garantia de live</div>
+          <div class="preco-produto">R$ 50,00</div>
+          <button class="botao-comprar">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <div class="nome-produto">BLACK</div>
+          <div class="descricao-produto">💳 Limite R$1.200 a R$5.000 ✅ Garantia de live</div>
+          <div class="preco-produto">R$ 85,00</div>
+          <button class="botao-comprar">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <div class="nome-produto">INFINITE</div>
+          <div class="descricao-produto">💳 Limite R$5.000 a R$10.000 ✅ Garantia de live</div>
+          <div class="preco-produto">R$ 90,00</div>
+          <button class="botao-comprar">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <div class="nome-produto">AMEX</div>
+          <div class="descricao-produto">💳 Limite R$10.000 a R$100.000 ✅ Garantia de live</div>
+          <div class="preco-produto">R$ 100,00</div>
+          <button class="botao-comprar">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="networking">
+      <h2>NETWORKING</h2>
+      <div class="produtos">
+        <!-- Produtos de networking -->
+      </div>
+    </section>
+
+    <section id="nf">
+      <h2>NF</h2>
+      <div class="produtos">
+        <!-- Produtos NF -->
+      </div>
+    </section>
+
+    <section id="milhas">
+      <h2>MILHAS</h2>
+      <div class="produtos">
+        <!-- Produtos milhas -->
+      
+<section id="milhas">  
+  <h2>MILHAS</h2>  
+  <div class="produtos">  
+    <div class="produto">  
+      <div class="nome-produto">MILHAS 100K</div>  
+      <div class="descricao-produto">💳 O QUE VOCÊ PODE FAZER COM SUAS MILHAS? 💳<br><br>✈ VIAJAR PELO MUNDO 🌍<br>🛒 COMPRAR EM LOJAS PARCEIRAS 🛍<br>🚗 ALUGAR CARROS PARA SUA JORNADA 🚖<br>🚌 GARANTIR PASSAGENS DE ÔNIBUS 🏞<br>🏨 SE HOSPEDAR EM HOTÉIS DE LUXO 🏩<br>🚢 ZARPAR EM UM CRUZEIRO INESQUECÍVEL 🛳<br>⛽ ABASTECER SEU CARRO SEM PESO NO BOLSO 🚘<br><br>💥 MILHAS 100% GARANTIDAS! ✅</div>  
+      <div class="preco-produto">R$ 169,99</div>  
+      <button class="botao-comprar">Adicionar ao Carrinho</button>  
+    </div>  
+    <div class="produto">  
+      <div class="nome-produto">MILHAS 200K</div>  
+      <div class="descricao-produto">💳 O QUE VOCÊ PODE FAZER COM SUAS MILHAS? 💳<br><br>✈ VIAJAR PELO MUNDO 🌍<br>🛒 COMPRAR EM LOJAS PARCEIRAS 🛍<br>🚗 ALUGAR CARROS PARA SUA JORNADA 🚖<br>🚌 GARANTIR PASSAGENS DE ÔNIBUS 🏞<br>🏨 SE HOSPEDAR EM HOTÉIS DE LUXO 🏩<br>🚢 ZARPAR EM UM CRUZEIRO INESQUECÍVEL 🛳<br>⛽ ABASTECER SEU CARRO SEM PESO NO BOLSO 🚘<br><br>💥 MILHAS 100% GARANTIDAS! ✅</div>  
+      <div class="preco-produto">R$ 230,00</div>  
+      <button class="botao-comprar">Adicionar ao Carrinho</button>  
+    </div>  
+    <div class="produto">  
+      <div class="nome-produto">MILHAS 300K</div>  
+      <div class="descricao-produto">💳 O QUE VOCÊ PODE FAZER COM SUAS MILHAS? 💳<br><br>✈ VIAJAR PELO MUNDO 🌍<br>🛒 COMPRAR EM LOJAS PARCEIRAS 🛍<br>🚗 ALUGAR CARROS PARA SUA JORNADA 🚖<br>🚌 GARANTIR PASSAGENS DE ÔNIBUS 🏞<br>🏨 SE HOSPEDAR EM HOTÉIS DE LUXO 🏩<br>🚢 ZARPAR EM UM CRUZEIRO INESQUECÍVEL 🛳<br>⛽ ABASTECER SEU CARRO SEM PESO NO BOLSO 🚘<br><br>💥 MILHAS 100% GARANTIDAS! ✅</div>  
+      <div class="preco-produto">R$ 299,00</div>  
+      <button class="botao-comprar">Adicionar ao Carrinho</button>  
+    </div>  
+    <div class="produto">  
+      <div class="nome-produto">MILHAS 500K</div>  
+      <div class="descricao-produto">💳 O QUE VOCÊ PODE FAZER COM SUAS MILHAS? 💳<br><br>✈ VIAJAR PELO MUNDO 🌍<br>🛒 COMPRAR EM LOJAS PARCEIRAS 🛍<br>🚗 ALUGAR CARROS PARA SUA JORNADA 🚖<br>🚌 GARANTIR PASSAGENS DE ÔNIBUS 🏞<br>🏨 SE HOSPEDAR EM HOTÉIS DE LUXO 🏩<br>🚢 ZARPAR EM UM CRUZEIRO INESQUECÍVEL 🛳<br>⛽ ABASTECER SEU CARRO SEM PESO NO BOLSO 🚘<br><br>💥 MILHAS 100% GARANTIDAS! ✅</div>  
+      <div class="preco-produto">R$ 400,00</div>  
+      <button class="botao-comprar">Adicionar ao Carrinho</button>  
+    </div>  
+    <div class="produto">  
+      <div class="nome-produto">MILHAS 1MM</div>  
+      <div class="descricao-produto">💳 O QUE VOCÊ PODE FAZER COM SUAS MILHAS? 💳<br><br>✈ VIAJAR PELO MUNDO 🌍<br>🛒 COMPRAR EM LOJAS PARCEIRAS 🛍<br>🚗 ALUGAR CARROS PARA SUA JORNADA 🚖<br>🚌 GARANTIR PASSAGENS DE ÔNIBUS 🏞<br>🏨 SE HOSPEDAR EM HOTÉIS DE LUXO 🏩<br>🚢 ZARPAR EM UM CRUZEIRO INESQUECÍVEL 🛳<br>⛽ ABASTECER SEU CARRO SEM PESO NO BOLSO 🚘<br><br>💥 MILHAS 100% GARANTIDAS! ✅</div>  
+      <div class="preco-produto">R$ 519,99</div>  
+      <button class="botao-comprar">Adicionar ao Carrinho</button>  
+    </div>  
+  </div>  
+</section>
+
+      </div>
+    </section>
+
+    <div id="carrinho">
+      <h2>Carrinho</h2>
+      <div id="itens-carrinho"></div>
+      <div id="total">Total: R$ 0,00</div>
+      <button id="finalizar">Finalizar compra</button>
+    </div>
+
+    <div class="pix-section" id="pix-section">
+      <h2>Pagamento via Pix</h2>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=bf6cf789-486f-460a-9cdc-23a0acf13ee0&size=180x180" alt="QR Code Pix" />
+      <p>Chave Pix: <strong>bf6cf789-486f-460a-9cdc-23a0acf13ee0</strong></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Instagram: <a href="https://www.instagram.com/yuridlszd" target="_blank">@yuridlszd</a></p>
+  </footer>
+
+  <script>
+    const botoes = document.querySelectorAll('.botao-comprar');
+    const listaCarrinho = document.getElementById('itens-carrinho');
+    const totalSpan = document.getElementById('total');
+    const btnFinalizar = document.getElementById('finalizar');
+    const pixSection = document.getElementById('pix-section');
+
+    let total = 0;
+
+    botoes.forEach(botao => {
+      botao.addEventListener('click', function () {
+        const produto = this.parentElement;
+        const nome = produto.querySelector('.nome-produto').innerText;
+        const precoTexto = produto.querySelector('.preco-produto').innerText;
+        const preco = parseFloat(precoTexto.replace('R$', '').replace(',', '.'));
+
+        const item = document.createElement('div');
+        item.textContent = `${nome} - R$ ${preco.toFixed(2).replace('.', ',')}`;
+        listaCarrinho.appendChild(item);
+
+        total += preco;
+        totalSpan.innerText = `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
+      });
+    });
+
+    btnFinalizar.addEventListener('click', () => {
+      pixSection.classList.add('active');
+      window.scrollTo({ top: pixSection.offsetTop, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
+
